@@ -42,4 +42,31 @@
   const maker = CoffeeMaker.makeMachine(100);
   const coffee = maker.makeCoffee(2);
   console.log(coffee);
+
+  class User {
+    // private firstName: string;
+    // private lastName: string
+
+    get fullName(): string {
+      return `${this.firstName} ${this.lastName}`;
+    }
+
+    private internalAge = 4;
+
+    get age(): number {
+      return this.internalAge;
+    }
+
+    set age(num: number) {
+      this.internalAge = num;
+    }
+
+    constructor(private firstName: string, private lastName: string) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+  }
+
+  const user = new User("Steve", "Jobs");
+  console.log(user.fullName);
 }
