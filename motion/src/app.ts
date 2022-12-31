@@ -16,23 +16,18 @@ class App {
       "https://picsum.photos/600/300"
     );
     this.page.addChild(image);
-    // image.attachTo(appRoot, "beforeend");
 
     const note = new NoteComponent("Note Title", "Note Body");
     this.page.addChild(note);
-    // note.attachTo(appRoot, "beforeend");
 
     const todo = new TodoComponent("Todo Title", "Todo Item");
     this.page.addChild(todo);
-    //todo.attachTo(appRoot, "beforeend");
 
     const video = new VideoComponent(
       "Video Title",
       "https://www.youtube.com/embed/BoTVJvvXNnc?list=RDo9SujOQXfgk"
     );
     this.page.addChild(video);
-
-    // video.attachTo(appRoot, "beforeend");
   }
 }
 
